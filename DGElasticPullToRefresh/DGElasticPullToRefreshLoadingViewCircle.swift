@@ -114,7 +114,7 @@ open class DGElasticPullToRefreshLoadingViewCircle: DGElasticPullToRefreshLoadin
     }
     
     fileprivate func currentDegree() -> CGFloat {
-        return shapeLayer.value(forKeyPath: "transform.rotation.z") as! CGFloat
+        return CGFloat((shapeLayer.value(forKeyPath: "transform.rotation.z") as! NSNumber).floatValue)
     }
     
     override open func tintColorDidChange() {
